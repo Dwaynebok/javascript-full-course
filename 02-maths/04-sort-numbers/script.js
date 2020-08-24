@@ -15,8 +15,17 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        var points = [2,4,14,10,90,23,60]
+        points.sort(function(a, b){return a-b});
+
+
+        alert(points); // Outputs: 2,4,10,14,23,60,90
 
     });
 
 })();
+
+
+
+
+

@@ -13,7 +13,17 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+       let a = 1;
+       let b = 21;
+       let acc = [];
+       for (i = a; i <= b; i++) {
+           if (Math.sqrt(i) == parseInt(Math.sqrt(i)))
+           {acc.push(i)};
+        }
+
+       alert(acc);
+
+
 
     });
 

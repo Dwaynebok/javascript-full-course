@@ -9,16 +9,49 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+let one;
+let two;
+
+
+(function () {
     // to get the value of an input: document.getElementById("element-id").value
 
-    var performOperation = function(operation) {
+
+    var performOperation = function (operation) {
         // perform the operation
+        switch (operation) {
+            case "addition":
+                checkinput();
+                alert(one + two);
+                break;
+
+            case "substraction":
+                checkinput();
+                alert(one - two);
+                break;
+
+            case "multiplication":
+                checkinput();
+                alert(one * two);
+                break;
+
+            case "division":
+                checkinput()
+                alert(one / two)
+                break
+
+        }
     };
 
-    Array.from(document.querySelectorAll("button.operator")).forEach(function($btn) {
-        $btn.addEventListener("click", function() {
+    Array.from(document.querySelectorAll("button.operator")).forEach(function ($btn) {
+        $btn.addEventListener("click", function () {
             performOperation($btn.id);
         });
     });
 })();
+
+
+function checkinput() {
+    one = parseInt(document.getElementById('op-one').value);
+    two = parseInt(document.getElementById('op-two').value);
+}
