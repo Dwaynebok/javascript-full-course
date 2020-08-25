@@ -9,8 +9,30 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
 
-})();
+        const button = document.getElementsByTagName('button')[0];
+        button.addEventListener('click', () => {
+            document.body.style.backgroundColor = colors();
+        },);
+
+
+
+
+    })();
+
+function colors() {
+    let colorArray = [];
+
+    for (let i = 0; i < 3; i++) {
+        colorArray.push(Math.floor(Math.random() * (255 - 0) + 0));
+    }
+    // rgb -> hex
+    let color = colorArray
+        .map(x => x.toString(16))
+        .join('');
+
+    return `#${color}`;
+}
+
