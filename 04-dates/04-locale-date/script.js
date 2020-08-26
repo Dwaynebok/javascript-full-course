@@ -11,8 +11,18 @@
 
 (function() {
 
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    var d = new Date();
+    var n = d.toLocaleTimeString();
+    alert("The time is: \n"+n);
 
-    // your code here
+    var day = d.getDay();
+    var daylist = ["sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"]
+    console.log("today is :" + daylist[day] + "");
+    var hour = d.getUTCHours();
+    var minutes = d.getUTCMinutes();
+    var seconds = d.getUTCSeconds();
+
+
+
 
 })();
