@@ -11,16 +11,18 @@
 
 (function() {
 
-    var d = new Date();
-    var n = d.toLocaleTimeString();
-    alert("The time is: \n"+n);
+    /*document.getElementById("target").innerHTML = ;*/
 
-    var day = d.getDay();
-    var daylist = ["sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"]
-    console.log("today is :" + daylist[day] + "");
-    var hour = d.getUTCHours();
-    var minutes = d.getUTCMinutes();
-    var seconds = d.getUTCSeconds();
+    var d = new Date();
+    var month = d.toLocaleString("default",{month: "long" });
+    var day = d.toLocaleDateString("default", {weekday: "long" });
+    var currentDate = day + " " + d.getDate() + " " + month + " " + d.getFullYear() + ", " + d.getHours() + "h" + d.getMinutes();
+
+    document.getElementById("target").innerHTML = month ;
+
+
+
+
 
 
 
