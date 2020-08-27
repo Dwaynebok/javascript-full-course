@@ -26,6 +26,11 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").onclick = function (event) {
+
+        for (i = 0; i<fruits.length; i++) {
+            console.log(fruits[i]);
+        }
+    }
 
 })();
