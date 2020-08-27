@@ -89,6 +89,15 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").onclick = function (event){
+
+        people.forEach(function (person  ){
+           /* console.log(people.firstname["Jean"] + " " + people.lastname["Dupont"])*/
+            if (person.firstname === "Jean" && person.lastname === "Dupont"){
+                console.log(person.email);
+                console.log(people.indexOf(person));
+            }
+        });
+    }
 
 })();
