@@ -9,8 +9,27 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
 
-    // your code here
+
+(function() {
+    let x;
+
+
+    document.querySelector("button").onclick = function (event) {
+        checkInput();
+        let fridays = "";
+        for (i = 0; i <= 11; i++){
+            let dayt = new Date(x, i, 13);
+            let weekday = dayt.getDay();
+            if (weekday === 5){
+                fridays += (dayt.toLocaleString("default", {month: "long"}) + "\n");
+            }
+        }
+        alert(fridays);
+    }
+
+    function checkInput(){
+        x = document.getElementById("year").value;
+    }
 
 })();
