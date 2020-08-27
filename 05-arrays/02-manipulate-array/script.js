@@ -12,6 +12,7 @@
 (function() {
 
     var fruits = [
+
         "pomme",
         "poire",
         "fraise",
@@ -22,8 +23,21 @@
         "pêche",
         "raisin",
         "cerise",
+
     ];
 
-    // your code here
+    document.querySelector("button").onclick = function (event) {
+
+        fruits.shift()
+        fruits.pop()
+        fruits.unshift("Banana")
+        fruits.push("kiwi")
+
+       /* alert(fruits) */
+        console.log(fruits)
+
+
+
+    }
 
 })();
