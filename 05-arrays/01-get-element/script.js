@@ -26,6 +26,9 @@
         "cherry",
     ];
 
-    // your code here
+  document.querySelector("button").onclick = function (event) {
+
+      alert(fruits[4]);
+  }
 
 })();
