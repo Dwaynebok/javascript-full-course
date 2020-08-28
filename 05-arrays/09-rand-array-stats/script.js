@@ -11,6 +11,35 @@
 
 (function() {
 
-    // your code here
+   document.querySelector("button").onclick = function (event){
+      let numbers = [];
+      for (x=0; x<10;x++){
+         numbers.push(Math.floor(Math.random()*Math.floor(100)))
+      }
+
+      let table = document.querySelectorAll("td");
+      console.log(table);for (i=0; i<table.length; i++){
+         table[i].innerText=numbers[i];
+
+      /*for (i = 1; i <=10; i++) {
+         document.getElementById("n-"+i).innerHTML = numbers[n-1];*/
+
+      }
+
+      let min = Math.min(...numbers);
+      let max = Math.max(...numbers);
+      let sum = numbers.reduce((a, b) => a + b, 0);
+      let avg = sum/10;
+      document.getElementById("min").innerHTML = min;
+      document.getElementById("max").innerHTML = max;
+      document.getElementById("sum").innerHTML = sum;
+      document.getElementById("average").innerHTML = avg;
+
+
+
+
+   }
 
 })();
+
+
