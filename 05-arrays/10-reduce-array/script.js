@@ -89,6 +89,11 @@
         },
     ];
 
-    // your code here
+
+    document.getElementById("run").addEventListener("click", function () {
+       var x = people.reduce((a,b)=>a+b.age, 0)
+        console.log(x);
+
+    })
 
 })();

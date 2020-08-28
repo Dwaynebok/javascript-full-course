@@ -27,7 +27,10 @@
         "raisin",
         "cerise",
     ];
+    
 
-    // your code here
+    var uniqueFruits = Array.from(new Set(fruits));
+    console.log(uniqueFruits);
+
 
 })();
