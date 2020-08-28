@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var fruits = [
         "apple",
@@ -26,6 +26,21 @@
         "cherry",
     ];
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function (){
 
+
+        let x = fruits.includes("apple")
+        if (x == true)
+        {
+            console.log("yes there is an apple");}
+
+        else
+        {
+            (console.log("no there is no apple"))
+        }
+
+
+
+
+    })
 })();
