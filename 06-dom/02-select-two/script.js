@@ -11,7 +11,7 @@
 
 (function() {
 
-    target.innerHTML = "owned";
+ target.innerHTML = "owned!"
 
 
 })();

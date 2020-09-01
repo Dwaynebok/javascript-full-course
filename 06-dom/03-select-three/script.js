@@ -11,12 +11,10 @@
 
 (function() {
 
-    x = document.getElementsByClassName("target")
+   x = document.getElementsByClassName("target")
     for(i = 0 ; i<x.length; i++){
-        x[i].innerText = "owned";
+        x[i].innerText = "owned!";
     }
-
-
 
 
 
