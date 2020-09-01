@@ -19,6 +19,26 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+
+    var images = document.getElementsByTagName("img");
+    var a = 0;
+    function slide(){
+        a = a + 1;
+        a = a % gallery.length;
+        return gallery[a];
+    }
+
+    document.getElementById("next").addEventListener("click", function (){
+        images[0].setAttribute("src",slide());
+
+
+    });
 
 })();
+
+/*
+created variable for the image and selected the "img" for all the images
+whereby we indicated a=0
+created a function for the slide
+then ame to the main element and set an attribute for for the "src"
+ */
