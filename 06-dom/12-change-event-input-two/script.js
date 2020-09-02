@@ -11,6 +11,21 @@
 
 (function() {
 
-    // your code here
+    function changeEvent(){
+        var pass = document.getElementById("pass-one").value
+        if(pass.match(/[0-9]{2}/)&& pass.length>=8)
+            document.getElementById("validity").innerHTML = "ok"
+        else{
+            document.getElementById("validity").innerHTML = "Not ok"
+
+        }
+    }
+            document.getElementById("pass-one").addEventListener("keyup", changeEvent);
+
+
+
+
+
+
 
 })();

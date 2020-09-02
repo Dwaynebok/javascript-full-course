@@ -40,7 +40,7 @@
     let counterX = document.getElementById("counter");
 
     let x = document.getElementById("pass-one").addEventListener("keypress", ()=>{
-        if(counter<11){
+        if(counter<10){
             counterX.innerHTML = `${counter}/10`;
             counter++
         }
