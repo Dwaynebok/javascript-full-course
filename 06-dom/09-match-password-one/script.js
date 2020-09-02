@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener('click', function (){
+
+        checkInput();
+        if( one.value === two.value){
+            one.style.border = "";
+            two.style.border = "";
+        }
+        else{
+            one.style.border = "5px  solid red";
+            two.style.border = "5px solid red";
+        }
+
+    })
+
+    function checkInput(){
+        one = document.getElementById("pass-one");
+        two = document.getElementById("pass-two");
+
+    }
+
+
+
+
 
 })();

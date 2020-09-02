@@ -11,6 +11,31 @@
 
 (function() {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function (){
+
+        checkInput();
+        if(one.value === two.value){
+            one.style.border = "";
+            two.style.border = "";
+        }
+        else{
+            document.getElementById("pass-one").classList.add("error");
+            document.getElementById("pass-two").classList.add("error");
+        }
+    })
+
+
+
+
+
+
+
+
+
+    function checkInput(){
+        one = document.getElementById("pass-one");
+        two = document.getElementById("pass-two");
+
+    }
 
 })();
