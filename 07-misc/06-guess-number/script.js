@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+    var number  = Math.floor(Math.random()* (100 - 1)+ 1);
+    console.log(number);
+
+    var count = 1;
+
+    while(true) {
+
+        var input = prompt("guess the number");
+
+        if (number < input) {
+            alert("too high");
+            count++;
+        } else if (number > input) {
+            count++;
+            alert("too low");
+        } else {
+            alert("Congratulations you guessed " + count + "correctly");
+            break;
+        }
+    }
+
+
+
 
 })();

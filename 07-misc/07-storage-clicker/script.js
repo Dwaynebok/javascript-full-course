@@ -11,6 +11,48 @@
 
 (function() {
 
-    // your code here
+
+  /*  document.getElementById("increment").addEventListener("click", function (){
+
+        let newNumber = document.getElementById("target").innerHTML;
+    document.getElementById("target").innerHTML;
+        (newNumber.innerHTML)++;
+        console.log(newNumber);
+
+    })
+
+   */
+    document.getElementById("target").innerHTML =  localStorage.getItem("counter");
+    console.log(localStorage.getItem("counter"));
+
+    document.getElementById("increment").addEventListener("click", function() {
+        let newNumber = document.getElementById("target");
+        (newNumber.innerHTML)++;
+        localStorage.setItem("counter", newNumber.innerHTML);
+
+    })
+
+
+
+
+
+
+
+
+/*
+    document.getElementById("increment").value;
+    localStorage.setItem();
+    var count = 0;
+
+
+    if (localStorage.clickcount) {
+        localStorage.clickcount = Number(localStorage.clickcount) + 1;
+    } else {
+        localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " +
+        localStorage.clickcount + " time(s).";
+
+ */
 
 })();
