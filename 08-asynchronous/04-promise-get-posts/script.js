@@ -10,5 +10,36 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
-})();
+
+    let promise = new Promise((resolve , reject) => {
+      resolve (window.lib.getPosts(function (){
+
+
+          }).then (res => {
+              console.log(res);
+          })
+
+      )
+    })
+
+
+
+
+
+
+
+
+
+        /*
+            .then((res) => {
+                // successfully got data
+                resolve(res);
+            })
+            .catch((err) => {
+                // an error occured
+                reject(err);
+            });
+
+         */
+
+    })() ;

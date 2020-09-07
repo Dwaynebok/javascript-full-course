@@ -10,5 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+
+
+    document.getElementById("run").addEventListener("click" , function (){
+        window.lib.getPosts(function (error,articles){
+            if ( error){
+                console.log(1)
+            }else {
+                console.log(null);
+                articles.forEach(function (article){
+                    window.lib.getComments(article.id, function (error,comments){
+                        article.comments = comments;
+                        console.log(article);
+                    })
+
+                })
+
+            }
+        })
+    })
+
+
+
+
+
 })();
