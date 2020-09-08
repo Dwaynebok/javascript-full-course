@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").addEventListener("click", function (){
+
+
+        let promise = new Promise((resolve , reject) => {
+            resolve (window.lib.getPersons(function (error, persons){
+
+
+                }).then (res => {
+                    console.log(res);
+                }).catch((error) => {
+                    console.log('Error occurred!', error);
+
+
+
+                })
+
+            )
+        })
+
+    })
+
+
+
+
+
+
 })();
