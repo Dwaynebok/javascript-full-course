@@ -10,5 +10,24 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    document.getElementById("run").addEventListener("click", post)
+
+
+        async function post() {
+            try {
+                let result = await window.lib.getPersons();
+                console.log(result);
+            } catch (error) {
+                console.log('Error occurred!', error);
+            }
+        }
+
+
+
+
+
+
+
+
 })();
