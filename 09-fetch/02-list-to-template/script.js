@@ -10,5 +10,29 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let run = document.getElementById("run");
+    run.addEventListener("click", function (){
+
+
+
+        fetch("http://localhost:3000/heroes")
+            .then(response => response .json())
+            .then(data => appendData(data));
+
+
+        function appendData(data){
+            let target = document.getElementById("target");
+            for (let i =  0; i < data.length; i++){
+                let tempVar = document.getElementById("tpl-hero").content.cloneNode(true);
+                tempVar.querySelector(".name").innerHTML = data[i].name;
+                tempVar.querySelector(".alter-ego").innerHTML = data[i].alterEgo;
+                tempVar.querySelector(".powers").innerHTML = data[i].abilities;
+                target.appendChild(tempVar);
+            }
+
+        }
+
+    })
+
+
 })();
