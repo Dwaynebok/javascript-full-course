@@ -10,5 +10,31 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+
+    let input = document.getElementById("hero-id").value;
+
+
+    document.getElementById("run").addEventListener("click", function (){
+
+
+        fetch("http://localhost:3000/heroes")
+            .then(response =>{
+                return response.json();
+            }).then(allData => {
+                allData.forEach(data => {
+                    if (data.id == input){
+                        let index = allData.indexOf(data);
+                        allData.splice(index,1);
+                        console.log(allData);
+                    }
+                })
+            }
+        )
+
+
+
+
+
+
+    })
 })();
