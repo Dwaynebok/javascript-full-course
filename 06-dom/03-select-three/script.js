@@ -11,8 +11,8 @@
 
 (function() {
 
-   x = document.getElementsByClassName("target")
-    for(i = 0 ; i<x.length; i++){
+ const  x = document.getElementsByClassName("target")
+    for(let i = 0 ; i<x.length; i++){
         x[i].innerText = "owned!";
     }
 

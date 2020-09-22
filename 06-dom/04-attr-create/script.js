@@ -11,15 +11,15 @@
 
 (function() {
 
-    var source = document.getElementById("source").dataset.image;
+   let source = document.getElementById("source").dataset.image;
     console.log(source);
 
-    var newImage = document.createElement("img");
+    let newImage = document.createElement("img");
     newImage.setAttribute("src",source);
 
     document.getElementById("target").appendChild(newImage);
 
-    var element = document.getElementById("source");
+    let element = document.getElementById("source");
     element.parentNode.removeChild(element);
     console.log(source.image);
 

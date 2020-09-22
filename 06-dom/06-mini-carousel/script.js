@@ -19,20 +19,22 @@
         "../../_shared/img/map.svg",
     ];
 
+let image = document.querySelector("img");
 
-    var images = document.getElementsByTagName("img");
-    var a = 0;
-    function slide(){
-        a = a + 1;
-        a = a % gallery.length;
-        return gallery[a];
-    }
+let imgIndex = 1;
 
-    document.getElementById("next").addEventListener("click", function (){
-        images[0].setAttribute("src",slide());
+document.getElementById('next').addEventListener('click',function (){
 
+   if (imgIndex < gallery.length){
+       image.setAttribute('src',`${gallery[imgIndex]}`);
+       imgIndex++;
+   }else{
+       imgIndex = 0
+       image.setAttribute('src',`${gallery[imgIndex]}`);
+       imgIndex++;
+   }
+})
 
-    });
 
 })();
 
